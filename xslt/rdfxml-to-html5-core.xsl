@@ -57,8 +57,9 @@
         to output separate docs
         BUT this is a serious pain when input docs change-->
     <xsl:template match="/">
-        <!-- *NOTE* output filepath here -->
-        <xsl:result-document href="../../docs/review_{$brgh:format}.html">
+        <!-- *NOTE* output filepath here;
+            when using current batch transformation scenarios, filepath starts from source RDF/XML location -->
+        <xsl:result-document href="../../docs/rdainrdf/review_{$brgh:format}.html">
             <html xmlns="http://www.w3.org/1999/xhtml">
                 <head>
                     <title>

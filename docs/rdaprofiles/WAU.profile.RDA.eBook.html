@@ -23,7 +23,7 @@
             </tr>
             <tr>
                <th scope="row">Last Updated</th>
-               <td>2020-05-06</td>
+               <td>2020-05-27</td>
             </tr>
             <tr>
                <th scope="row">Description</th>
@@ -257,7 +257,6 @@
             <li>Value Constraint(s):
                <ul>
                   <li>Resource Template for Value(s): <a href="https://www.lib.washington.edu/static/public/cams/profiles/WAU.profile.RDA.adminMetadata.html#WAURTBF2BFLCAdminMetadata">WAU:RT:BF2:BFLC:AdminMetadata</a></li>
-                  <li>Value Datatype: <a href="http://id.loc.gov/ontologies/bibframe/AdminMetadata">http://id.loc.gov/ontologies/bibframe/AdminMetadata</a></li>
                </ul>
             </li>
             <li><span class="backlink"><a href="#WAURTRDAWorkptList">RETURN TO PROPERTY LIST FOR WAU RT RDA Work e-Books</a></span></li>
@@ -494,7 +493,7 @@
                <ul>
                   <li>Value Lookup Source(s):
                      <ul>
-                        <li><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="http://id.loc.gov/authorities/names.html">LC Name Authority File (all names)</a> via the <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/">LD4P Authority Lookup Service</a> &gt; <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/authority_list">Authorities</a> (cached) &gt; locnames_ld4l_cache</li>
+                        <li><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="http://id.loc.gov/authorities/names.html">LC Name Authority File (persons / RWO IRIs)</a> via the <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/">LD4P Authority Lookup Service</a> &gt; <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/authority_list">Authorities</a> (cached) &gt; locnames_rwo_ld4l_cache</li>
                      </ul>
                   </li>
                </ul>
@@ -1948,7 +1947,6 @@
                   <li>Value Lookup Source(s):
                      <ul>
                         <li><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://wiki.dbpedia.org/">DBpedia</a> via the <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/">LD4P Authority Lookup Service</a> &gt; <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/authority_list">Authorities</a> (cached) &gt; dbpedia_ld4l_cache</li>
-                        <li><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="http://www.isni.org/">ISNI</a> via the <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/">LD4P Authority Lookup Service</a> &gt; <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/authority_list">Authorities</a> (cached) &gt; isni_ld4l_cache</li>
                         <li><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="http://id.loc.gov/authorities/names.html">LC Name Authority File (all names)</a> via the <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/">LD4P Authority Lookup Service</a> &gt; <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/authority_list">Authorities</a> (cached) &gt; locnames_ld4l_cache</li>
                         <li><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://www.oclc.org/research/areas/data-science/fast.html">OCLC FAST (Faceted Application of Subject Terminology)</a> via the <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/">LD4P Authority Lookup Service</a> &gt; <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/authority_list">Authorities</a> (cached) &gt; oclcfast_ld4l_cache</li>
                         <li><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
@@ -4338,6 +4336,7 @@
             <li><a href="#isindextoexpressionRDA24.5">is index to expression (RDA 24.5)</a></li>
             <li><a href="#issupplementtoexpressionRDA24.5">is supplement to expression (RDA 24.5)</a></li>
             <li><a href="#isaugmentedbyexpressionRDA24.5">is augmented by expression (RDA 24.5)</a></li>
+            <li><a href="#hascartographerofexpression">has cartographer of expression</a></li>
             <li><a href="#hasaddendaexpressionRDA24.5">has addenda expression (RDA 24.5)</a></li>
             <li><a href="#hasappendixexpressionRDA24.5">has appendix expression (RDA 24.5)</a></li>
             <li><a href="#hascatalogueexpressionRDA24.5">has catalogue expression (RDA 24.5)</a></li>
@@ -4606,6 +4605,26 @@
                   <li>Value Lookup Source(s):
                      <ul>
                         <li>Sinopia resources</li>
+                     </ul>
+                  </li>
+               </ul>
+            </li>
+            <li><span class="backlink"><a href="#WAURTRDAExpressionptList">RETURN TO PROPERTY LIST FOR WAU RT RDA Expression e-Books</a></span></li>
+            <li><span class="backlink"><a href="#rtList">RETURN TO RESOURCE TEMPLATE LIST</a></span></li>
+         </ul>
+      </section>
+      <section xmlns="" class="ptInfo" id="hascartographerofexpression">
+         <h4><span>Property Template: has cartographer of expression</span></h4>
+         <ul>
+            <li>Property IRI: <a href="http://rdaregistry.info/Elements/e/P20042">http://rdaregistry.info/Elements/e/P20042</a></li>
+            <li>Optional</li>
+            <li>Repeatable</li>
+            <li>Property type: lookup</li>
+            <li>Value Constraint(s):
+               <ul>
+                  <li>Value Lookup Source(s):
+                     <ul>
+                        <li><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="http://id.loc.gov/authorities/names.html">LC Name Authority File (persons / RWO IRIs)</a> via the <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/">LD4P Authority Lookup Service</a> &gt; <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/authority_list">Authorities</a> (cached) &gt; locnames_rwo_ld4l_cache</li>
                      </ul>
                   </li>
                </ul>

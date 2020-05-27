@@ -21,7 +21,7 @@
                             $t?output"
                 />
             </xsl:variable>
-            <xsl:result-document href="../html/WAU.profile.RDA.{$format}.html">
+            <xsl:result-document href="../docs/rdaprofiles/WAU.profile.RDA.{$format}.html">
                 <xsl:sequence select="$html-transform"/>
             </xsl:result-document>
             <!-- TO DO:

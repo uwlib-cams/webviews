@@ -23,7 +23,7 @@
             </tr>
             <tr>
                <th scope="row">Last Updated</th>
-               <td>2020-05-06</td>
+               <td>2020-05-27</td>
             </tr>
             <tr>
                <th scope="row">Description</th>
@@ -139,7 +139,6 @@
             <li>Value Constraint(s):
                <ul>
                   <li>Resource Template for Value(s): <a href="https://www.lib.washington.edu/static/public/cams/profiles/WAU.profile.RDA.adminMetadata.html#WAURTBF2BFLCAdminMetadata">WAU:RT:BF2:BFLC:AdminMetadata</a></li>
-                  <li>Value Datatype: <a href="http://id.loc.gov/ontologies/bibframe/AdminMetadata">http://id.loc.gov/ontologies/bibframe/AdminMetadata</a></li>
                </ul>
             </li>
             <li><span class="backlink"><a href="#WAURTRDAWorkptList">RETURN TO PROPERTY LIST FOR WAU RT RDA Work Electronic Theses and Dissertations</a></span></li>
@@ -197,7 +196,7 @@
                <ul>
                   <li>Value Lookup Source(s):
                      <ul>
-                        <li><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="http://id.loc.gov/authorities/names.html">LC Name Authority File (all names)</a> via the <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/">LD4P Authority Lookup Service</a> &gt; <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/authority_list">Authorities</a> (cached) &gt; locnames_ld4l_cache</li>
+                        <li><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="http://id.loc.gov/authorities/names.html">LC Name Authority File (persons / RWO IRIs)</a> via the <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/">LD4P Authority Lookup Service</a> &gt; <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/authority_list">Authorities</a> (cached) &gt; locnames_rwo_ld4l_cache</li>
                      </ul>
                   </li>
                </ul>
@@ -870,7 +869,6 @@
                   <li>Value Lookup Source(s):
                      <ul>
                         <li><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://wiki.dbpedia.org/">DBpedia</a> via the <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/">LD4P Authority Lookup Service</a> &gt; <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/authority_list">Authorities</a> (cached) &gt; dbpedia_ld4l_cache</li>
-                        <li><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="http://www.isni.org/">ISNI</a> via the <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/">LD4P Authority Lookup Service</a> &gt; <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/authority_list">Authorities</a> (cached) &gt; isni_ld4l_cache</li>
                         <li><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="http://id.loc.gov/authorities/names.html">LC Name Authority File (all names)</a> via the <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/">LD4P Authority Lookup Service</a> &gt; <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/authority_list">Authorities</a> (cached) &gt; locnames_ld4l_cache</li>
                         <li><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://www.oclc.org/research/areas/data-science/fast.html">OCLC FAST (Faceted Application of Subject Terminology)</a> via the <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/">LD4P Authority Lookup Service</a> &gt; <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/authority_list">Authorities</a> (cached) &gt; oclcfast_ld4l_cache</li>
                         <li><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a></li>
@@ -1816,6 +1814,7 @@
             <li><a href="#isrevisedasRDA24.5">is revised as (RDA 24.5)</a></li>
             <li><a href="#isaugmentationofexpressionRDA24.5">is augmentation of expression (RDA 24.5)</a></li>
             <li><a href="#isaugmentedbyexpressionRDA24.5">is augmented by expression (RDA 24.5)</a></li>
+            <li><a href="#hascartographerofexpression">has cartographer of expression</a></li>
             <li><a href="#hasaddendaexpressionRDA24.5">has addenda expression (RDA 24.5)</a></li>
             <li><a href="#hasappendixexpressionRDA24.5">has appendix expression (RDA 24.5)</a></li>
             <li><a href="#haserrataexpressionRDA24.5">has errata expression (RDA 24.5)</a></li>
@@ -1938,6 +1937,26 @@
                   <li>Value Lookup Source(s):
                      <ul>
                         <li>Sinopia resources</li>
+                     </ul>
+                  </li>
+               </ul>
+            </li>
+            <li><span class="backlink"><a href="#WAURTRDAExpressionptList">RETURN TO PROPERTY LIST FOR WAU RT RDA Expression Electronic Theses and Dissertations</a></span></li>
+            <li><span class="backlink"><a href="#rtList">RETURN TO RESOURCE TEMPLATE LIST</a></span></li>
+         </ul>
+      </section>
+      <section xmlns="" class="ptInfo" id="hascartographerofexpression">
+         <h4><span>Property Template: has cartographer of expression</span></h4>
+         <ul>
+            <li>Property IRI: <a href="http://rdaregistry.info/Elements/e/P20042">http://rdaregistry.info/Elements/e/P20042</a></li>
+            <li>Optional</li>
+            <li>Repeatable</li>
+            <li>Property type: lookup</li>
+            <li>Value Constraint(s):
+               <ul>
+                  <li>Value Lookup Source(s):
+                     <ul>
+                        <li><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="http://id.loc.gov/authorities/names.html">LC Name Authority File (persons / RWO IRIs)</a> via the <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/">LD4P Authority Lookup Service</a> &gt; <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="https://lookup.ld4l.org/authority_list">Authorities</a> (cached) &gt; locnames_rwo_ld4l_cache</li>
                      </ul>
                   </li>
                </ul>
@@ -3197,6 +3216,7 @@
             <li><a href="#hasnoteonissue,part,oriterationusedasbasisforidentificationofmanifestationRDA2.17.13">has note on issue, part, or iteration used as basis for identification of manifestation
                   (RDA 2.17.13)</a></li>
             <li><a href="#hasfiletypeRDA3.19.2">has file type (RDA 3.19.2)</a></li>
+            <li><a href="#hasencodingformatRDA3.19.3">has encoding format (RDA 3.19.3)</a></li>
             <li><a href="#hasfilesizeRDA3.19.4">has file size (RDA 3.19.4)</a></li>
             <li><a href="#hasdigitalrepresentationofcartographiccontentRDA3.19.8">has digital representation of cartographic content (RDA 3.19.8)</a></li>
             <li><a href="#hasequipmentorsystemrequirementRDA3.20">has equipment or system requirement (RDA 3.20)</a></li>
@@ -3681,7 +3701,27 @@
          </ul>
       </section>
       <section xmlns="" class="ptInfo" id="hasencodingformatRDA3.19.3"></section>
-      <section xmlns="" class="ptInfo" id="hasencodingformatRDA3.19.3"></section>
+      <section xmlns="" class="ptInfo" id="hasencodingformatRDA3.19.3">
+         <h4><span>Property Template: has encoding format (RDA 3.19.3)</span></h4>
+         <ul>
+            <li>Property IRI: <a href="http://rdaregistry.info/Elements/m/P30096">http://rdaregistry.info/Elements/m/P30096</a></li>
+            <li>RDA Toolkit Element Reference: <a href="http://access.rdatoolkit.org/3.19.3.html">http://access.rdatoolkit.org/3.19.3.html</a></li>
+            <li>Optional</li>
+            <li>Repeatable</li>
+            <li>Property type: literal</li>
+            <li>Value Constraint(s):
+               <ul>
+                  <li>Default Values:
+                     <ul>
+                        <li>Default Literal: PDF</li>
+                     </ul>
+                  </li>
+               </ul>
+            </li>
+            <li><span class="backlink"><a href="#WAURTRDAManifestationptList">RETURN TO PROPERTY LIST FOR WAU RT RDA Manifestation Electronic Theses and Dissertations</a></span></li>
+            <li><span class="backlink"><a href="#rtList">RETURN TO RESOURCE TEMPLATE LIST</a></span></li>
+         </ul>
+      </section>
       <section xmlns="" class="ptInfo" id="hasdetailsofencodingformatRDA3.19.3.4"></section>
       <section xmlns="" class="ptInfo" id="hasencodedbitrateRDA3.19.7"></section>
       <section xmlns="" class="ptInfo" id="ismanifestationcommentaryinRDA23.5"></section>
