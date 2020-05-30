@@ -24,10 +24,6 @@
             <xsl:result-document href="../docs/rdaprofiles/WAU.profile.RDA.{$format}.html">
                 <xsl:sequence select="$html-transform"/>
             </xsl:result-document>
-            <!-- TO DO:
-                Publish directly to profiles directory,
-                use param for filepath
-                (Why isn't this working?) -->
         </xsl:for-each>
     </xsl:template>
 </xsl:stylesheet>
