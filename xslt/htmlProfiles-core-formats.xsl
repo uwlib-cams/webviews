@@ -158,7 +158,7 @@
           <tr>
             <th scope="row">ID</th>
             <td>
-              <xsl:value-of select="concat(j:string[@key = 'id'], $brgh:format)"/>
+              <xsl:value-of select="concat(j:string[@key = 'id'], ':', $brgh:format)"/>
             </td>
           </tr>
           <tr class="backlink">
