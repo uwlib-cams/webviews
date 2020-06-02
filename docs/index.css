@@ -1,3 +1,6 @@
 html {
     font-family: monospace ;
 }
+p, ul, li {
+    font-size: 125% ;
+}
