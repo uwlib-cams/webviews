@@ -8,6 +8,7 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
     exclude-result-prefixes="xs math"
     version="3.0">
 
@@ -144,10 +145,17 @@
             </xsl:choose>
         </span>
     </xsl:template>
-    <xsl:template name="bnode_prop">
-        <xsl:param name="p"/>
-        <span class="property">
-            
-        </span>
+    <!-- Template to get bf:status node value, maybe could be further modularized,
+        combined with part of val_resource above, etc. -->
+    <xsl:template name="aMDStatus">
+        <xsl:param name="statusBNode"/>
+        <xsl:choose>
+            <xsl:when test="//rdf:Description[@rdf:nodeID=$statusBNode]">
+                <xsl:value-of select="//rdf:Description[@rdf:nodeID=$statusBNode]/bf:code"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:text>BIBFRAME STATUS NODE NOT AVAILABLE IN LOCAL DATA</xsl:text>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 </xsl:stylesheet>

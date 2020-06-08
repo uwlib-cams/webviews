@@ -47,8 +47,10 @@
             <xsl:when test="$brgh:format = 'monograph'">WAU:RT:RDA:Work:monograph</xsl:when>
             <xsl:when test="$brgh:format = 'serial'">WAU:RT:RDA:Work:serial</xsl:when>
             <xsl:when test="$brgh:format = 'sSerial'">WAU:RT:RDA:Work:eSerial</xsl:when>
-            <xsl:when test="$brgh:format = 'soundRecording'">WAU:RT:RDA:Work:soundRecording</xsl:when>
-            <!-- Not sure if I could make an otherwise serve a purpose here -->
+            <xsl:when test="$brgh:format = 'soundRecording'"
+                >WAU:RT:RDA:Work:soundRecording</xsl:when>
+            <!-- How to create a variable value that will select for any (*, etc.)? -->
+            <!-- Not sure if I could make an otherwise serve a purpose here; use otherwise to select for all? -->
             <xsl:otherwise/>
         </xsl:choose>
     </xsl:variable>
@@ -100,6 +102,7 @@
         match="rdf:Description[rdf:type[@rdf:resource = 'http://rdaregistry.info/Elements/c/C10001']]"
         mode="wProps">
         <xsl:param name="wIri" select="@rdf:about"/>
+        <xsl:param name="bNode" select="bf:adminMetadata/@rdf:nodeID"/>
         <h2>
             <span class="work">
                 <xsl:text>Statements on the  </xsl:text>
@@ -145,18 +148,15 @@
                     </xsl:call-template>
                 </li>
             </xsl:for-each>
-            <!-- COMMENTING OUT THIS TEMPLATE CALL FOR NOW, BECAUSE IT ISN'T FULLY WORKING
-                (see below)
-                
-                TO DO:
-                    * Fix
-                    * Add adminMetadata template calls, etc. to templates for E, M, and I below
-                    
-            <xsl:apply-templates select="bf:adminMetadata" mode="toBnode">
-                <xsl:with-param name="id" select="@rdf:nodeID"/>
-            </xsl:apply-templates>
-            
-            -->
+            <!-- TO DO:
+                    * Add adminMetadata template calls, etc. to templates for E, M, and I below -->
+            <li>
+                <span class="aMDTop">
+                    <xsl:text>Administrative Metadata</xsl:text>
+                </span>
+                <xsl:apply-templates select="../rdf:Description[@rdf:nodeID = $bNode]" mode="bNode"
+                />
+            </li>
         </ul>
         <xsl:apply-templates
             select="../rdf:Description[rdf:type[@rdf:resource = 'http://rdaregistry.info/Elements/c/C10006']][rdae:P20231/@rdf:resource = $wIri]"
@@ -166,6 +166,7 @@
         match="rdf:Description[rdf:type[@rdf:resource = 'http://rdaregistry.info/Elements/c/C10006']]"
         mode="eProps">
         <xsl:param name="eIri" select="@rdf:about"/>
+        <xsl:param name="bNode" select="bf:adminMetadata/@rdf:nodeID"/>
         <!-- Possible improvement:
             Visually connect or otherwise make apparent when multiple EM(I) sets per W exist? -->
         <h2>
@@ -211,8 +212,13 @@
                     </xsl:call-template>
                 </li>
             </xsl:for-each>
-            <!-- TO DO:
-                Output bnodes here and/or in named template-->
+            <li>
+                <span class="aMDTop">
+                    <xsl:text>Administrative Metadata</xsl:text>
+                </span>
+                <xsl:apply-templates select="../rdf:Description[@rdf:nodeID = $bNode]" mode="bNode"
+                />
+            </li>
         </ul>
         <xsl:apply-templates
             select="../rdf:Description[rdf:type[@rdf:resource = 'http://rdaregistry.info/Elements/c/C10007']][rdam:P30139/@rdf:resource = $eIri]"
@@ -223,6 +229,7 @@
         match="rdf:Description[rdf:type[@rdf:resource = 'http://rdaregistry.info/Elements/c/C10007']]"
         mode="mProps">
         <xsl:param name="mIri" select="@rdf:about"/>
+        <xsl:param name="bNode" select="bf:adminMetadata/@rdf:nodeID"/>
         <h2>
             <span class="manifestation">
                 <xsl:text>Statements on an </xsl:text>
@@ -247,9 +254,6 @@
                         <xsl:with-param name="p" select="."/>
                     </xsl:call-template>
                     <xsl:value-of select="$break"/>
-                    <!-- BIG QUESTION / TO DO:
-                        Get any associated rdfs:label values for hot text, to do this 
-                        [Call template resourceLabel here and below?] -->
                     <xsl:call-template name="val_resource">
                         <xsl:with-param name="r" select="@rdf:resource"/>
                     </xsl:call-template>
@@ -266,8 +270,13 @@
                     </xsl:call-template>
                 </li>
             </xsl:for-each>
-            <!-- TO DO:
-                Output bnodes here and/or in named template-->
+            <li>
+                <span class="aMDTop">
+                    <xsl:text>Administrative Metadata</xsl:text>
+                </span>
+                <xsl:apply-templates select="../rdf:Description[@rdf:nodeID = $bNode]" mode="bNode"
+                />
+            </li>
         </ul>
         <xsl:apply-templates
             select="../rdf:Description[rdf:type[@rdf:resource = 'http://rdaregistry.info/Elements/c/C10003']][rdai:P40049/@rdf:resource = $mIri]"
@@ -276,6 +285,7 @@
     <xsl:template
         match="rdf:Description[rdf:type[@rdf:resource = 'http://rdaregistry.info/Elements/c/C10003']]"
         mode="iProps">
+        <xsl:param name="bNode" select="bf:adminMetadata/@rdf:nodeID"/>
         <h2>
             <span class="item">
                 <xsl:text>Statements on an </xsl:text>
@@ -300,9 +310,6 @@
                         <xsl:with-param name="p" select="."/>
                     </xsl:call-template>
                     <xsl:value-of select="$break"/>
-                    <!-- BIG QUESTION / TO DO:
-                        Get any associated rdfs:label values for hot text, to do this 
-                        [Call template resourceLabel here and below?] -->
                     <xsl:call-template name="val_resource">
                         <xsl:with-param name="r" select="@rdf:resource"/>
                     </xsl:call-template>
@@ -319,33 +326,53 @@
                     </xsl:call-template>
                 </li>
             </xsl:for-each>
-            <!-- TO DO:
-                Output bnodes here and/or in named template-->
+            <li>
+                <span class="aMDTop">
+                    <xsl:text>Administrative Metadata</xsl:text>
+                </span>
+                <xsl:apply-templates select="../rdf:Description[@rdf:nodeID = $bNode]" mode="bNode"
+                />
+            </li>
         </ul>
     </xsl:template>
-    <xsl:template match="bf:adminMetadata" mode="toBnode">
-        <!-- CONTINUED FROM ABOVE:
-            When template bf:adminMetadata template is called above, the call to named template "property"
-            below functions just fine... -->
-        <!-- Add css classes for adminMetadata later? -->
-        <xsl:param name="id"/>
-        <li>
-            <xsl:call-template name="property">
-                <xsl:with-param name="p" select="."/>
-            </xsl:call-template>
-            <xsl:text>:</xsl:text>
-            <!-- ...but failure to work begins here... -->
-            <xsl:apply-templates select="../rdf:Description[@rdf:nodeID = $id]" mode="inBnode"/>
-        </li>
-    </xsl:template>
-    <!-- This template produces no output whatsoever. 
-        What is the problem? -->
-    <xsl:template match="rdf:Description" mode="inBnode">
-        <ul>
-            <xsl:for-each select="./*">
+    <xsl:template match="rdf:Description" mode="bNode">
+        <ul class="aMDStatements">
+            <xsl:for-each select="*[@xml:lang]">
                 <li>
-                    <xsl:text>TEST PLEASE</xsl:text>
+                    <xsl:call-template name="property">
+                        <xsl:with-param name="p" select="."/>
+                    </xsl:call-template>
+                    <xsl:value-of select="$break"/>
+                    <xsl:call-template name="val_literal">
+                        <xsl:with-param name="l" select="."/>
+                    </xsl:call-template>
                 </li>
+            </xsl:for-each>
+            <xsl:for-each select="*[@rdf:resource]">
+                <li>
+                    <xsl:call-template name="property">
+                        <xsl:with-param name="p" select="."/>
+                    </xsl:call-template>
+                    <xsl:value-of select="$break"/>
+                    <xsl:call-template name="val_resource">
+                        <xsl:with-param name="r" select="@rdf:resource"/>
+                    </xsl:call-template>
+                </li>
+            </xsl:for-each>
+            <xsl:for-each select="*[@rdf:nodeID]">
+                <li>
+                    <xsl:call-template name="property">
+                        <xsl:with-param name="p" select="."/>
+                    </xsl:call-template>
+                    <xsl:value-of select="$break"/>
+                    <xsl:call-template name="aMDStatus">
+                        <xsl:with-param name="statusBNode" select="@rdf:nodeID"/>
+                    </xsl:call-template>
+                </li>
+            </xsl:for-each>
+            <xsl:for-each select="*[not(@rdf:resource | @xml:lang | @rdf:nodeID)]">
+                <!-- Reproduce similar for WEMI props to confirm no unexpected element attributes? -->
+                <xsl:text>UNEXPECTED ADMIN METADATA STATEMENT TYPE</xsl:text>
             </xsl:for-each>
         </ul>
     </xsl:template>

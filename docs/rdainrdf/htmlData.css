@@ -3,7 +3,7 @@ html {
 }
 .descSet {
     background-color: #DCE8F5 ;
-    font-size: 150% ;
+    font-size: 140% ;
 }
 .sinopiaUrl {
     font-size: 110% ;
@@ -22,7 +22,7 @@ html {
     font-size: 120% ;
 }
 .item {
-    background-color: #F4F5DC ;
+    background-color: #FFDF9E ;
     font-size: 120% ;
 }
 .property {}
@@ -33,3 +33,11 @@ html {
 .langTag {
     font-style: italic ;
 }
+.aMDTop {
+    font-weight: bold ;
+    font-size: 110% ;
+    line-height: 150% ;
+    background-color: #F4F5DC ;
+    
+}
+.aMDStatements {}
