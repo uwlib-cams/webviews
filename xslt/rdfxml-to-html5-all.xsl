@@ -30,7 +30,7 @@
                     map {
                     'stylesheet-location': 'rdfxml-to-html5-core.xsl',
                     'source-node': doc('../python/export_xml/2020-06-07.rdf'),
-                    'stylesheet-params': map{QName('https://github.com/briesenberg07/bmrLIS/', 'formatTitle'): $format}
+                    'stylesheet-params': map{QName('https://github.com/briesenberg07/bmrLIS/', 'format'): $format}
                     })
                     return $t?output"
                 />
