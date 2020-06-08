@@ -9,10 +9,7 @@
     xmlns:fn="http://www.w3.org/2005/xpath-functions"
     exclude-result-prefixes="xs math"
     version="3.0">
-    <xsl:param name="source"/>
     <xsl:template match="/">
-        <!-- Now trying messing with var names: Perhaps spaces in filenames prevented output?
-            So far changed dvdVideo from the original naming pattern -->
         <xsl:for-each
             select="('dvdVideo', 'eBook', 'etd', 'graphic', 'eGraphic', 'map', 'eMap', 'monograph', 'serial', 'eSerial', 'soundRecording')">
             <xsl:variable name="format" select="."/>
@@ -32,13 +29,13 @@
                     let $t := transform(
                     map {
                     'stylesheet-location': 'rdfxml-to-html5-core.xsl',
-                    'source-node': doc('2020-05-14.rdf'),
+                    'source-node': doc('../python/export_xml/2020-06-07.rdf'),
                     'stylesheet-params': map{QName('https://github.com/briesenberg07/bmrLIS/', 'formatTitle'): $format}
                     })
                     return $t?output"
                 />
             </xsl:variable>
-            <xsl:result-document href="../html/review{$formatTitle}.html">
+            <xsl:result-document href="../docs/rdainrdf/review_{$format}.html">
                 <xsl:sequence select="$html-transform"/>
             </xsl:result-document>
         </xsl:for-each>
