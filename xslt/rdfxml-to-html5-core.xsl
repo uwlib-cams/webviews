@@ -37,6 +37,7 @@
     </xsl:variable>
     <xsl:variable name="templateId">
         <xsl:choose>
+            <!-- Output all-formats-in-one -->
             <xsl:when test="$brgh:format = 'dvdVideo'">WAU:RT:RDA:Work:dvdVideo</xsl:when>
             <xsl:when test="$brgh:format = 'eBook'">WAU:RT:RDA:Work:eBook</xsl:when>
             <xsl:when test="$brgh:format = 'etd'">WAU:RT:RDA:Work:etd</xsl:when>
@@ -49,32 +50,22 @@
             <xsl:when test="$brgh:format = 'sSerial'">WAU:RT:RDA:Work:eSerial</xsl:when>
             <xsl:when test="$brgh:format = 'soundRecording'"
                 >WAU:RT:RDA:Work:soundRecording</xsl:when>
-            <!-- How to create a variable value that will select for any (*, etc.)? -->
-            <!-- Not sure if I could make an otherwise serve a purpose here; use otherwise to select for all? -->
             <xsl:otherwise/>
         </xsl:choose>
     </xsl:variable>
-    <!-- TO DO:
-        *Currently using xsl:result-doc + oXygen scenario params
-        to output separate docs
-        BUT this is a serious pain when input docs change-->
     <xsl:template match="/">
-        <!-- *NOTE* output filepath here;
-            when using current batch transformation scenarios, filepath starts from source RDF/XML location -->
-        <xsl:result-document href="../../docs/rdainrdf/review_{$brgh:format}.html">
-            <html xmlns="http://www.w3.org/1999/xhtml">
-                <head>
-                    <title>
-                        <xsl:text>review_</xsl:text>
-                        <xsl:value-of select="$brgh:format"/>
-                    </title>
-                    <link href="htmlData.css" rel="stylesheet" type="text/css"/>
-                </head>
-                <body>
-                    <xsl:apply-templates select="rdf:RDF"/>
-                </body>
-            </html>
-        </xsl:result-document>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+                <title>
+                    <xsl:text>review_</xsl:text>
+                    <xsl:value-of select="$brgh:format"/>
+                </title>
+                <link href="htmlData.css" rel="stylesheet" type="text/css"/>
+            </head>
+            <body>
+                <xsl:apply-templates select="rdf:RDF"/>
+            </body>
+        </html>
     </xsl:template>
     <xsl:template match="rdf:RDF">
         <xsl:apply-templates
@@ -85,7 +76,7 @@
         match="rdf:Description[rdf:type[@rdf:resource = 'http://rdaregistry.info/Elements/c/C10001']]"
         mode="wemiTop">
         <xsl:choose>
-            <!-- This seems a clumsy way to do this but we don't want certain sets -->
+            <!-- Exclude certain sets -->
             <xsl:when test="rdaw:P10331[text() != '' and text() != 'test' and text() != 'void']">
 
                 <h1>

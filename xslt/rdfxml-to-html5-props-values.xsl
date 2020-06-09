@@ -112,6 +112,7 @@
             </a>
         </span>
         <xsl:value-of select="$break2"/>
+        <!-- Need change here (and elsewhere?) to output each label separated by commas -->
         <span class="label">
             <xsl:choose>
                 <xsl:when test="//rdf:Description[@rdf:about = $r]">

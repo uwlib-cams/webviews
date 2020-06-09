@@ -9,19 +9,12 @@
     xmlns:fn="http://www.w3.org/2005/xpath-functions"
     exclude-result-prefixes="xs math"
     version="3.0">
+    <!-- **Param required: Filepath to source file** -->
+    <xsl:param name="source"/>
     <xsl:template match="/">
         <xsl:for-each
             select="('dvdVideo', 'eBook', 'etd', 'graphic', 'eGraphic', 'map', 'eMap', 'monograph', 'serial', 'eSerial', 'soundRecording')">
             <xsl:variable name="format" select="."/>
-            <!-- I believe that the source-node option is the sticking point
-                Using the var alone returns error that this is an atomic value.
-                So far I've tried:
-                    * Quotes/no quotes in oXygen scenario param setting
-                        Currently using ''
-                    * Wrapping $source in doc()
-                        This is the closest I've come to success I believe, error here says I/O error reported by XML parser processing file.
-                        Tried to solve this changing .rdf file extension to .xml but no luck
-                    * Now trying using fn:doc (w/namespace) plus filename as string (moving filename to current folder -->
             <xsl:variable name="html-transform">
                 
                 <xsl:sequence
@@ -29,7 +22,7 @@
                     let $t := transform(
                     map {
                     'stylesheet-location': 'rdfxml-to-html5-core.xsl',
-                    'source-node': doc('../python/export_xml/2020-06-07.rdf'),
+                    'source-node': doc($source),
                     'stylesheet-params': map{QName('https://github.com/briesenberg07/bmrLIS/', 'format'): $format}
                     })
                     return $t?output"
