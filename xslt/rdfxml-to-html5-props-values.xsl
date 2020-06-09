@@ -6,10 +6,8 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:math="http://www.w3.org/2005/xpath-functions/math"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
-    exclude-result-prefixes="xs math"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:bf="http://id.loc.gov/ontologies/bibframe/" exclude-result-prefixes="xs math"
     version="3.0">
 
     <!-- Keys -->
@@ -93,7 +91,9 @@
                 </xsl:when>
                 <xsl:when test="key('bfObjProp', local-name(.), $bf2)">
                     <a href="{key('bfObjProp', local-name(.), $bf2)/@rdf:about}">
-                        <xsl:value-of select="normalize-space(key('bfObjProp', local-name(.), $bf2)/rdfs:label)"/>
+                        <xsl:value-of
+                            select="normalize-space(key('bfObjProp', local-name(.), $bf2)/rdfs:label)"
+                        />
                     </a>
                 </xsl:when>
                 <xsl:otherwise>
@@ -112,16 +112,26 @@
             </a>
         </span>
         <xsl:value-of select="$break2"/>
-        <!-- Need change here (and elsewhere?) to output each label separated by commas -->
         <span class="label">
             <xsl:choose>
                 <xsl:when test="//rdf:Description[@rdf:about = $r]">
-                    <xsl:text>"</xsl:text>
-                    <xsl:value-of select="//rdf:Description[@rdf:about = $r]/rdfs:label"/>
-                    <xsl:text>"</xsl:text>
+                    <xsl:for-each select="//rdf:Description[@rdf:about = $r]/rdfs:label">
+                        <xsl:choose>
+                            <xsl:when test="position() != last()">
+                                <xsl:text>"</xsl:text>
+                                <xsl:value-of select="."/>
+                                <xsl:text>," </xsl:text>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:text>"</xsl:text>
+                                <xsl:value-of select="."/>
+                                <xsl:text>"</xsl:text>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:for-each>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:text>No resource label available</xsl:text>
+                    <xsl:text>No resource label(s) in local data</xsl:text>
                 </xsl:otherwise>
             </xsl:choose>
         </span>
@@ -151,11 +161,11 @@
     <xsl:template name="aMDStatus">
         <xsl:param name="statusBNode"/>
         <xsl:choose>
-            <xsl:when test="//rdf:Description[@rdf:nodeID=$statusBNode]">
-                <xsl:value-of select="//rdf:Description[@rdf:nodeID=$statusBNode]/bf:code"/>
+            <xsl:when test="//rdf:Description[@rdf:nodeID = $statusBNode]">
+                <xsl:value-of select="//rdf:Description[@rdf:nodeID = $statusBNode]/bf:code"/>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:text>BIBFRAME STATUS NODE NOT AVAILABLE IN LOCAL DATA</xsl:text>
+                <xsl:text>No bf:Status node in local data</xsl:text>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
