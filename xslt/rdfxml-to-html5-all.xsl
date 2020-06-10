@@ -9,6 +9,8 @@
     xmlns:fn="http://www.w3.org/2005/xpath-functions"
     exclude-result-prefixes="xs math"
     version="3.0">
+    <!-- Output HTML5 -->
+    <xsl:output method="html" version="5"/>
     <!-- **Param required: Filepath to source file** -->
     <xsl:param name="source"/>
     <xsl:template match="/">

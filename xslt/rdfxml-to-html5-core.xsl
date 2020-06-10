@@ -23,10 +23,9 @@
     xmlns:xpf="http://www.w3.org/2005/xpath-functions"
     xmlns:brgh="https://github.com/briesenberg07/bmrLIS/" exclude-result-prefixes="xs math"
     version="3.0">
-    <!-- Output HTML5 -->
-    <xsl:output method="html" version="5"/>
     <!-- Include external stylesheets and templates -->
     <xsl:include href="rdfxml-to-html5-props-values.xsl"/>
+    <xsl:include href="common-elements.xsl"/>
     <!-- Parameters -->
     <xsl:param name="brgh:format"/>
     <!-- Vars -->
@@ -53,9 +52,11 @@
             <xsl:otherwise/>
         </xsl:choose>
     </xsl:variable>
+    <!-- Start templates -->
     <xsl:template match="/">
         <html xmlns="http://www.w3.org/1999/xhtml">
             <head>
+                <meta charset="utf-8"/>
                 <title>
                     <xsl:text>review_</xsl:text>
                     <xsl:value-of select="$brgh:format"/>
@@ -64,6 +65,8 @@
             </head>
             <body>
                 <xsl:apply-templates select="rdf:RDF"/>
+                <hr/>
+                <xsl:call-template name="CC0"/>
             </body>
         </html>
     </xsl:template>
