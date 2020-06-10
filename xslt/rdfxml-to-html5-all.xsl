@@ -13,7 +13,7 @@
     <xsl:param name="source"/>
     <xsl:template match="/">
         <xsl:for-each
-            select="('dvdVideo', 'eBook', 'etd', 'graphic', 'eGraphic', 'map', 'eMap', 'monograph', 'serial', 'eSerial', 'soundRecording')">
+            select="('dvdVideo', 'eBook', 'etd', 'graphic', 'eGraphic', 'map', 'eMap', 'monograph', 'serial', 'eSerial', 'soundRecording', 'all')">
             <xsl:variable name="format" select="."/>
             <xsl:variable name="html-transform">
                 
