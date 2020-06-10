@@ -139,8 +139,7 @@
                     </xsl:call-template>
                 </li>
             </xsl:for-each>
-            <!-- TO DO:
-                    * Add adminMetadata template calls, etc. to templates for E, M, and I below -->
+            <!-- AdminMetadata (bnode) apply-template should be conditional, not all description sets include it --> 
             <li>
                 <span class="aMDTop">
                     <xsl:text>Administrative Metadata</xsl:text>
@@ -158,8 +157,7 @@
         mode="eProps">
         <xsl:param name="eIri" select="@rdf:about"/>
         <xsl:param name="bNode" select="bf:adminMetadata/@rdf:nodeID"/>
-        <!-- Possible improvement:
-            Visually connect or otherwise make apparent when multiple EM(I) sets per W exist? -->
+        <!-- Visually connect or otherwise make apparent when multiple EM(I) sets per W exist? -->
         <h2>
             <span class="expression">
                 <xsl:text>Statements on an </xsl:text>
@@ -184,9 +182,6 @@
                         <xsl:with-param name="p" select="."/>
                     </xsl:call-template>
                     <xsl:value-of select="$break"/>
-                    <!-- BIG QUESTION / TO DO:
-                        Get any associated rdfs:label values for hot text, to do this 
-                        [Call template resourceLabel here and below?] -->
                     <xsl:call-template name="val_resource">
                         <xsl:with-param name="r" select="@rdf:resource"/>
                     </xsl:call-template>
@@ -203,6 +198,7 @@
                     </xsl:call-template>
                 </li>
             </xsl:for-each>
+            <!-- Make AM apply-template conditional -->
             <li>
                 <span class="aMDTop">
                     <xsl:text>Administrative Metadata</xsl:text>
@@ -215,7 +211,6 @@
             select="../rdf:Description[rdf:type[@rdf:resource = 'http://rdaregistry.info/Elements/c/C10007']][rdam:P30139/@rdf:resource = $eIri]"
             mode="mProps"/>
     </xsl:template>
-    <!-- What if I didn't add the predicate for rdf:type? Seems redundant -->
     <xsl:template
         match="rdf:Description[rdf:type[@rdf:resource = 'http://rdaregistry.info/Elements/c/C10007']]"
         mode="mProps">
@@ -261,6 +256,7 @@
                     </xsl:call-template>
                 </li>
             </xsl:for-each>
+            <!-- Make AM apply-template conditional -->
             <li>
                 <span class="aMDTop">
                     <xsl:text>Administrative Metadata</xsl:text>
@@ -317,6 +313,7 @@
                     </xsl:call-template>
                 </li>
             </xsl:for-each>
+            <!-- Make AM apply-template conditional -->
             <li>
                 <span class="aMDTop">
                     <xsl:text>Administrative Metadata</xsl:text>
@@ -363,6 +360,7 @@
             </xsl:for-each>
             <xsl:for-each select="*[not(@rdf:resource | @xml:lang | @rdf:nodeID)]">
                 <!-- Reproduce similar for WEMI props to confirm no unexpected element attributes? -->
+                <!-- Fix for unexpected AM statement types that are in output -->
                 <xsl:text>UNEXPECTED ADMIN METADATA STATEMENT TYPE</xsl:text>
             </xsl:for-each>
         </ul>
