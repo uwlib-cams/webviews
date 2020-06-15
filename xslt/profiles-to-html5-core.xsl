@@ -10,23 +10,13 @@
   <xsl:param name="brgh:format"/>
   <xsl:variable name="id" select="concat(':', $brgh:format)"/>
 
-  <xsl:include href="htmlProfiles-qaSources.xsl"/>
-  <xsl:include href="htmlProfiles-formatStrings.xsl"/>
+  <xsl:include href="profiles-to-html5-qaSources.xsl"/>
+  <xsl:include href="profiles-to-html5-formatStrings.xsl"/>
 
   <xsl:template match="/">
-    <xsl:apply-templates select="j:map/j:map[@key = 'Profile']" mode="html"/>
-  </xsl:template>
-  <xsl:template match="j:map/j:map[@key = 'Profile']" mode="html">
-    <!-- Would there be any advantages to outputting HTML5 over XHTML? Is this possible/advisable? 
-      Also:
-        Seeing namespaces in output:
-          section elements: xmlns=""
-          a elements: xmlns:xs="http://www.w3.org/2001/XMLSchema"
-            Why? How to exclude? -->
-    <html xmlns="http://www.w3.org/1999/xhtml" version="XHTML"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <html xmlns="http://www.w3.org/1999/xhtml">
       <head>
+        <meta charset="utf-8"/>
         <title>
           <xsl:value-of select="concat('RDA/RDF profile | ', $brgh:format)"/>
         </title>
@@ -39,7 +29,7 @@
             <xsl:with-param name="format" select="$brgh:format"/>
           </xsl:call-template>
         </h1>
-        <xsl:apply-templates select="." mode="profileInfo"/>
+        <xsl:apply-templates select="j:map/j:map[@key='Profile']" mode="profileInfo"/>
       </body>
     </html>
   </xsl:template>
