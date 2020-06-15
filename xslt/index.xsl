@@ -135,6 +135,7 @@
                             >Sound Recordings</a>
                     </li>
                 </ul>
+                <hr/>
                 <xsl:call-template name="CC0"/>
             </body>
         </html>

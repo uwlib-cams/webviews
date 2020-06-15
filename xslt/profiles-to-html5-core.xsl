@@ -12,6 +12,7 @@
 
   <xsl:include href="profiles-to-html5-qaSources.xsl"/>
   <xsl:include href="profiles-to-html5-formatStrings.xsl"/>
+  <xsl:include href="common-elements.xsl"/>
 
   <xsl:template match="/">
     <html xmlns="http://www.w3.org/1999/xhtml">
@@ -30,6 +31,8 @@
           </xsl:call-template>
         </h1>
         <xsl:apply-templates select="j:map/j:map[@key='Profile']" mode="profileInfo"/>
+        <hr/>
+        <xsl:call-template name="CC0"/>
       </body>
     </html>
   </xsl:template>
