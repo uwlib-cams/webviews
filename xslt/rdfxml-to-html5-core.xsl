@@ -64,6 +64,7 @@
                 <link href="htmlData.css" rel="stylesheet" type="text/css"/>
             </head>
             <body>
+                <xsl:call-template name="lastUpdate"/>
                 <xsl:apply-templates select="rdf:RDF"/>
                 <hr/>
                 <xsl:call-template name="CC0"/>

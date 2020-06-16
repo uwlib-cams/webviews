@@ -3,14 +3,16 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:math="http://www.w3.org/2005/xpath-functions/math" exclude-result-prefixes="xs math"
     version="3.0">
-    
-    <xsl:template name="favicon"/>
-    
-    <xsl:template name="faviconAttribution"/>
-        
+    <xsl:template name="lastUpdate">
+        <p>
+            <span class="lastUpdate">
+                <xsl:text>This page last updated: </xsl:text>
+                <xsl:value-of select="format-date(current-date(), '[Y0001]-[M01]-[D01]')"/>
+            </span>
+        </p>
+    </xsl:template>
     <xsl:template name="CC0">
-        <!-- Markup modified from CC output following form submission for CC0 license usage -->
-        <!-- rdfa? microdata? Need to understand better -->
+        <!-- Markup modified from output following form submission at Creative Commons for CC0 license usage -->
         <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
             <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">
                 <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png"
