@@ -36,7 +36,7 @@
     </xsl:variable>
     <xsl:variable name="templateId">
         <xsl:choose>
-            <!-- Output all-formats-in-one -->
+            <!-- TO DO: Output all-formats-in-one -->
             <xsl:when test="$brgh:format = 'dvdVideo'">WAU:RT:RDA:Work:dvdVideo</xsl:when>
             <xsl:when test="$brgh:format = 'eBook'">WAU:RT:RDA:Work:eBook</xsl:when>
             <xsl:when test="$brgh:format = 'etd'">WAU:RT:RDA:Work:etd</xsl:when>
@@ -64,17 +64,26 @@
                 <link href="htmlData.css" rel="stylesheet" type="text/css"/>
             </head>
             <body>
-                <xsl:call-template name="lastUpdate"/>
                 <xsl:apply-templates select="rdf:RDF"/>
                 <hr/>
+                <xsl:call-template name="lastUpdate"/>
                 <xsl:call-template name="CC0"/>
             </body>
         </html>
     </xsl:template>
     <xsl:template match="rdf:RDF">
-        <xsl:apply-templates
-            select="rdf:Description[rdf:type[@rdf:resource = 'http://rdaregistry.info/Elements/c/C10001']][sinvoc:hasResourceTemplate = $templateId]"
-            mode="wemiTop"/>
+        <xsl:choose>
+            <xsl:when test="$brgh:format = 'all'">
+                <xsl:apply-templates
+                    select="rdf:Description[rdf:type[@rdf:resource = 'http://rdaregistry.info/Elements/c/C10001']]"
+                    mode="wemiTop"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates
+                    select="rdf:Description[rdf:type[@rdf:resource = 'http://rdaregistry.info/Elements/c/C10001']][sinvoc:hasResourceTemplate = $templateId]"
+                    mode="wemiTop"/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     <xsl:template
         match="rdf:Description[rdf:type[@rdf:resource = 'http://rdaregistry.info/Elements/c/C10001']]"
@@ -143,7 +152,7 @@
                     </xsl:call-template>
                 </li>
             </xsl:for-each>
-            <!-- AdminMetadata (bnode) apply-template should be conditional, not all description sets include it --> 
+            <!-- AdminMetadata (bnode) apply-template should be conditional, not all description sets include it -->
             <li>
                 <span class="aMDTop">
                     <xsl:text>Administrative Metadata</xsl:text>
