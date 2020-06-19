@@ -86,6 +86,12 @@
                 </h2>
                 <p>Data presented by format:</p>
                 <ul>
+                    <!-- NO DATA YET for e-Serials 2020-06-18 -->
+                    <li>
+                        <a
+                            href="https://uwlib-cams.github.io/webviews/rdainrdf/review_all.html"
+                            >All UW Sinopia data</a>
+                    </li>
                     <li>
                         <a
                             href="https://uwlib-cams.github.io/webviews/rdainrdf/review_dvdVideo.html"
@@ -104,10 +110,6 @@
                         <a href="https://uwlib-cams.github.io/webviews/rdainrdf/review_eMap.html"
                             >Electronic Maps</a>
                     </li>
-                    <!-- NO DATA HERE YET
-        <li>
-        <a href="https://uwlib-cams.github.io/webviews/rdainrdf/review_eSerial.html">Electronic Serials</a>
-      </li> -->
                     <li>
                         <a href="https://uwlib-cams.github.io/webviews/rdainrdf/review_etd.html"
                             >Electronic Theses and Dissertations</a>
@@ -136,6 +138,7 @@
                     </li>
                 </ul>
                 <hr/>
+                <xsl:call-template name="lastUpdate"/>
                 <xsl:call-template name="CC0"/>
             </body>
         </html>

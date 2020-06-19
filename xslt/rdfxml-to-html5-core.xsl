@@ -67,6 +67,7 @@
                 <xsl:apply-templates select="rdf:RDF"/>
                 <hr/>
                 <xsl:call-template name="lastUpdate"/>
+                <xsl:call-template name="backlink"/>
                 <xsl:call-template name="CC0"/>
             </body>
         </html>
@@ -91,7 +92,6 @@
         <xsl:choose>
             <!-- Exclude certain sets -->
             <xsl:when test="rdaw:P10331[text() != '' and text() != 'test' and text() != 'void']">
-
                 <h1>
                     <span class="descSet">
                         <xsl:text>Description Set: </xsl:text>
@@ -123,11 +123,7 @@
             </a>
             <xsl:text> to search for and edit this resource in Sinopia</xsl:text>
         </span>
-        <!-- ul to ul code block identical for W, E, M, and I
-            *So probably could further improve code to avoid repetition
-            (How to? Put code in var, but then use what? Copy-of?)
-            TO DO:
-                Apply changes here to E, M, I -->
+        <!-- ul to ul code block identical for WEMI -->
         <ul>
             <xsl:for-each select="*[@rdf:resource]">
                 <xsl:variable name="rForLabel" select="@rdf:resource"/>

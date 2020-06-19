@@ -3,6 +3,14 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:math="http://www.w3.org/2005/xpath-functions/math" exclude-result-prefixes="xs math"
     version="3.0">
+    <xsl:template name="backlink">
+        <p>
+            <span class="backlink">
+                <xsl:text>Return to the </xsl:text>
+                <a href="https://uwlib-cams.github.io/webviews/">CAMS webviews index</a>
+            </span>
+        </p>
+    </xsl:template>
     <xsl:template name="lastUpdate">
         <p>
             <span class="lastUpdate">

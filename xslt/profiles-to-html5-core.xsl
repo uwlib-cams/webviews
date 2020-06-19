@@ -32,6 +32,8 @@
         </h1>
         <xsl:apply-templates select="j:map/j:map[@key='Profile']" mode="profileInfo"/>
         <hr/>
+        <xsl:call-template name="lastUpdate"/>
+        <xsl:call-template name="backlink"/>
         <xsl:call-template name="CC0"/>
       </body>
     </html>
