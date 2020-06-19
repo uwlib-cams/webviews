@@ -2,8 +2,6 @@
 <!-- NOTES:
     https://hackmd.io/@ries07/r1W0h6coI
     -->
-<!-- *REASSIGN MATCHING NAMESPACES IN SOURCE DATA BEFORE EACH TRANSFORM*
-    TO DO: Change rdfLibSer.py to eassign namespaces when serializing -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:math="http://www.w3.org/2005/xpath-functions/math"
@@ -36,7 +34,6 @@
     </xsl:variable>
     <xsl:variable name="templateId">
         <xsl:choose>
-            <!-- TO DO: Output all-formats-in-one -->
             <xsl:when test="$brgh:format = 'dvdVideo'">WAU:RT:RDA:Work:dvdVideo</xsl:when>
             <xsl:when test="$brgh:format = 'eBook'">WAU:RT:RDA:Work:eBook</xsl:when>
             <xsl:when test="$brgh:format = 'etd'">WAU:RT:RDA:Work:etd</xsl:when>
@@ -148,14 +145,24 @@
                     </xsl:call-template>
                 </li>
             </xsl:for-each>
-            <!-- AdminMetadata (bnode) apply-template should be conditional, not all description sets include it -->
-            <li>
-                <span class="aMDTop">
-                    <xsl:text>Administrative Metadata</xsl:text>
-                </span>
-                <xsl:apply-templates select="../rdf:Description[@rdf:nodeID = $bNode]" mode="bNode"
-                />
-            </li>
+            <xsl:choose>
+                <xsl:when test="//rdf:Description[@rdf:nodeID = $bNode]">
+                    <li>
+                        <span class="aMDTop">
+                            <xsl:text>Administrative metadata</xsl:text>
+                        </span>
+                        <xsl:apply-templates select="../rdf:Description[@rdf:nodeID = $bNode]"
+                            mode="bNode"/>
+                    </li>
+                </xsl:when>
+                <xsl:otherwise>
+                    <li>
+                        <span class="aMDTop">
+                            <xsl:text>No Administrative metadata available in local data</xsl:text>
+                        </span>
+                    </li>
+                </xsl:otherwise>
+            </xsl:choose>
         </ul>
         <xsl:apply-templates
             select="../rdf:Description[rdf:type[@rdf:resource = 'http://rdaregistry.info/Elements/c/C10006']][rdae:P20231/@rdf:resource = $wIri]"
@@ -183,7 +190,7 @@
             </a>
             <xsl:text> to search for and edit this resource in Sinopia</xsl:text>
         </span>
-        <!-- ul to ul code block identical for W, E, M, and I -->
+        <!-- ul to ul code block identical for WEMI -->
         <ul>
             <xsl:for-each select="*[@rdf:resource]">
                 <li>
@@ -207,14 +214,24 @@
                     </xsl:call-template>
                 </li>
             </xsl:for-each>
-            <!-- Make AM apply-template conditional -->
-            <li>
-                <span class="aMDTop">
-                    <xsl:text>Administrative Metadata</xsl:text>
-                </span>
-                <xsl:apply-templates select="../rdf:Description[@rdf:nodeID = $bNode]" mode="bNode"
-                />
-            </li>
+            <xsl:choose>
+                <xsl:when test="//rdf:Description[@rdf:nodeID = $bNode]">
+                    <li>
+                        <span class="aMDTop">
+                            <xsl:text>Administrative metadata</xsl:text>
+                        </span>
+                        <xsl:apply-templates select="../rdf:Description[@rdf:nodeID = $bNode]"
+                            mode="bNode"/>
+                    </li>
+                </xsl:when>
+                <xsl:otherwise>
+                    <li>
+                        <span class="aMDTop">
+                            <xsl:text>No Administrative metadata available in local data</xsl:text>
+                        </span>
+                    </li>
+                </xsl:otherwise>
+            </xsl:choose>
         </ul>
         <xsl:apply-templates
             select="../rdf:Description[rdf:type[@rdf:resource = 'http://rdaregistry.info/Elements/c/C10007']][rdam:P30139/@rdf:resource = $eIri]"
@@ -241,7 +258,7 @@
             </a>
             <xsl:text> to search for and edit this resource in Sinopia</xsl:text>
         </span>
-        <!-- ul to ul code block identical for W, E, M, and I -->
+        <!-- ul to ul code block identical for WEMI -->
         <ul>
             <xsl:for-each select="*[@rdf:resource]">
                 <li>
@@ -265,14 +282,24 @@
                     </xsl:call-template>
                 </li>
             </xsl:for-each>
-            <!-- Make AM apply-template conditional -->
-            <li>
-                <span class="aMDTop">
-                    <xsl:text>Administrative Metadata</xsl:text>
-                </span>
-                <xsl:apply-templates select="../rdf:Description[@rdf:nodeID = $bNode]" mode="bNode"
-                />
-            </li>
+            <xsl:choose>
+                <xsl:when test="//rdf:Description[@rdf:nodeID = $bNode]">
+                    <li>
+                        <span class="aMDTop">
+                            <xsl:text>Administrative metadata</xsl:text>
+                        </span>
+                        <xsl:apply-templates select="../rdf:Description[@rdf:nodeID = $bNode]"
+                            mode="bNode"/>
+                    </li>
+                </xsl:when>
+                <xsl:otherwise>
+                    <li>
+                        <span class="aMDTop">
+                            <xsl:text>No Administrative metadata available in local data</xsl:text>
+                        </span>
+                    </li>
+                </xsl:otherwise>
+            </xsl:choose>
         </ul>
         <xsl:apply-templates
             select="../rdf:Description[rdf:type[@rdf:resource = 'http://rdaregistry.info/Elements/c/C10003']][rdai:P40049/@rdf:resource = $mIri]"
@@ -298,7 +325,7 @@
             </a>
             <xsl:text> to search for and edit this resource in Sinopia</xsl:text>
         </span>
-        <!-- ul to ul code block identical for W, E, M, and I -->
+        <!-- ul to ul code block identical for WEMI -->
         <ul>
             <xsl:for-each select="*[@rdf:resource]">
                 <li>
@@ -322,14 +349,24 @@
                     </xsl:call-template>
                 </li>
             </xsl:for-each>
-            <!-- Make AM apply-template conditional -->
-            <li>
-                <span class="aMDTop">
-                    <xsl:text>Administrative Metadata</xsl:text>
-                </span>
-                <xsl:apply-templates select="../rdf:Description[@rdf:nodeID = $bNode]" mode="bNode"
-                />
-            </li>
+            <xsl:choose>
+                <xsl:when test="//rdf:Description[@rdf:nodeID = $bNode]">
+                    <li>
+                        <span class="aMDTop">
+                            <xsl:text>Administrative metadata</xsl:text>
+                        </span>
+                        <xsl:apply-templates select="../rdf:Description[@rdf:nodeID = $bNode]"
+                            mode="bNode"/>
+                    </li>
+                </xsl:when>
+                <xsl:otherwise>
+                    <li>
+                        <span class="aMDTop">
+                            <xsl:text>No Administrative metadata available in local data</xsl:text>
+                        </span>
+                    </li>
+                </xsl:otherwise>
+            </xsl:choose>
         </ul>
     </xsl:template>
     <xsl:template match="rdf:Description" mode="bNode">
@@ -368,9 +405,14 @@
                 </li>
             </xsl:for-each>
             <xsl:for-each select="*[not(@rdf:resource | @xml:lang | @rdf:nodeID)]">
-                <!-- Reproduce similar for WEMI props to confirm no unexpected element attributes? -->
-                <!-- Fix for unexpected AM statement types that are in output -->
-                <xsl:text>UNEXPECTED ADMIN METADATA STATEMENT TYPE</xsl:text>
+                <!-- I'm not sure how we got these values, must have been with earlier profile versions? -->
+                <li>
+                    <xsl:call-template name="property">
+                        <xsl:with-param name="p" select="."/>
+                    </xsl:call-template>
+                    <xsl:value-of select="$break"/>
+                    <xsl:value-of select="."/>
+                </li>
             </xsl:for-each>
         </ul>
     </xsl:template>
