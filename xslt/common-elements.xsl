@@ -3,6 +3,22 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:math="http://www.w3.org/2005/xpath-functions/math" exclude-result-prefixes="xs math"
     version="3.0">
+
+    <!-- VARS -->
+
+    
+    <!-- TEMPLATES -->
+    <xsl:template name="bmr_dd_css">
+        <xsl:text>
+td {
+  font-family: monospace;
+}
+table {
+  border-collapse: collapse ;
+}
+        </xsl:text>
+    </xsl:template>
+    
     <xsl:template name="backlink">
         <p>
             <span class="backlink">
@@ -11,6 +27,7 @@
             </span>
         </p>
     </xsl:template>
+    
     <xsl:template name="lastUpdate">
         <p>
             <span class="lastUpdate">
@@ -19,6 +36,7 @@
             </span>
         </p>
     </xsl:template>
+    
     <xsl:template name="CC0">
         <!-- Markup modified from output following form submission at Creative Commons for CC0 license usage -->
         <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
@@ -45,4 +63,5 @@
             <xsl:text>. </xsl:text>
         </p>
     </xsl:template>
+    
 </xsl:stylesheet>
