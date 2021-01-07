@@ -6,18 +6,8 @@
 
     <!-- VARS -->
 
-    
+
     <!-- TEMPLATES -->
-    <xsl:template name="bmr_dd_css">
-        <xsl:text>
-td {
-  font-family: monospace;
-}
-table {
-  border-collapse: collapse ;
-}
-        </xsl:text>
-    </xsl:template>
     
     <xsl:template name="backlink">
         <p>
@@ -27,7 +17,7 @@ table {
             </span>
         </p>
     </xsl:template>
-    
+
     <xsl:template name="lastUpdate">
         <p>
             <span class="lastUpdate">
@@ -36,7 +26,7 @@ table {
             </span>
         </p>
     </xsl:template>
-    
+
     <xsl:template name="CC0">
         <!-- Markup modified from output following form submission at Creative Commons for CC0 license usage -->
         <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
@@ -63,5 +53,5 @@ table {
             <xsl:text>. </xsl:text>
         </p>
     </xsl:template>
-    
+
 </xsl:stylesheet>
