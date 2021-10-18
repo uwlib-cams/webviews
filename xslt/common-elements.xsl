@@ -9,7 +9,7 @@
 
     <!-- TEMPLATES -->
     
-    <xsl:template name="backlink">
+    <xsl:template name="webviews_backlink">
         <p>
             <span class="backlink">
                 <xsl:text>Return to the </xsl:text>
@@ -17,7 +17,6 @@
             </span>
         </p>
     </xsl:template>
-
     <xsl:template name="lastUpdate">
         <p>
             <span class="lastUpdate">
@@ -26,8 +25,8 @@
             </span>
         </p>
     </xsl:template>
-
     <xsl:template name="CC0">
+        <xsl:param name="resource_title"/>
         <!-- Markup modified from output following form submission at Creative Commons for CC0 license usage -->
         <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
             <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">
@@ -43,7 +42,7 @@
             </a>
             <xsl:text> has waived all copyright and related or neighboring rights to </xsl:text>
             <span property="dct:title">
-                <xsl:text>CAMS Webviews</xsl:text>
+                <xsl:value-of select="$resource_title"/>
             </span>
             <xsl:text>. This work is published from: </xsl:text>
             <span property="vcard:Country" datatype="dct:ISO3166" content="US"
