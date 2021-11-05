@@ -4,6 +4,10 @@ from rdflib import *
 import datetime
 
 # NOTES: https://hackmd.io/@ries07/r1W0h6coI
+"""
+THIS WILL NO LONGER RETRIEVE SINOPIA RESOURCES
+SINOPIA NO LONGER USES TRELLIS, NOW USES A DIFFERENT API
+"""
 
 # (AKM) Generate directories - program will generate a set of directories to save the exported records in
 if not os.path.exists('export_xml'):# creates xml directory
