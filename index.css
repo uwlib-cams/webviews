@@ -1,0 +1,12 @@
+html {
+    font-family: monospace ;
+}
+.indexTop {
+    background-color: #DCE8F5 ;
+}
+.indexHeading {
+    background-color: #E8E8E8 ;
+}
+p, ul, li {
+    font-size: 125% ;
+}
