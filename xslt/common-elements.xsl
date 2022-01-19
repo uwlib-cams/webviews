@@ -9,6 +9,7 @@
 
     <!-- TEMPLATES -->
     
+    <!-- backlink could be adapted to allow use for backlinks to whichever GitHub Pages site with param -->
     <xsl:template name="webviews_backlink">
         <p>
             <span class="backlink">
@@ -17,6 +18,7 @@
             </span>
         </p>
     </xsl:template>
+    
     <xsl:template name="lastUpdate">
         <p>
             <span class="lastUpdate">
@@ -25,9 +27,11 @@
             </span>
         </p>
     </xsl:template>
+    
     <xsl:template name="CC0">
         <xsl:param name="resource_title"/>
         <!-- Markup modified from output following form submission at Creative Commons for CC0 license usage -->
+        <footer>
         <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
             <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">
                 <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png"
@@ -51,6 +55,7 @@
             </span>
             <xsl:text>. </xsl:text>
         </p>
+        </footer>
     </xsl:template>
 
 </xsl:stylesheet>
