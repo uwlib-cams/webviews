@@ -1,0 +1,68 @@
+/* CSS FOR MIG MAPs */
+body {
+  font-family: monospace;
+}
+.title_color {
+    background: #f2f2f2;
+    /* lighter gray */
+}
+.toc_color {
+    background: #d9d9d9;
+    /* light gray */
+}
+.toc_li {
+	margin-bottom: 7px;
+}
+.text_color {
+	background: #e8eafc;
+	/* lighter blue-gray */
+}
+.song_color {
+	background: #eef7ee;
+	/* lighter green-gray */
+}
+.oh_color {
+	background: #eef4f7;
+	/* lighter, different blue-gray */
+}
+.standalone_color {
+	background: #fcfbe9;
+	/* lighter...yellow?? */
+}
+.settings_color {
+	background: #e6e9f5;
+	/* lighter blue */
+}
+.no_bullets {
+	list-style-type: none;
+}
+.italic {
+    font-style: italic;
+}
+.bold {
+    font-weight: bold;
+}
+.large_one {
+    font-size: 110%;
+}
+.large_two {
+	font-size: 120%;
+}
+.right_align {
+    text-align: right;
+}
+.center_align {
+	text-align: center;
+}
+.prop_table_head {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.prop_table {
+	width: 100%;
+}
+.match_li_indent {
+	padding-left: 15px;
+}
+
