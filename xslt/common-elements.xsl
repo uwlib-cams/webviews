@@ -31,6 +31,7 @@
     <xsl:template name="CC0">
         <xsl:param name="resource_title"/>
         <!-- Markup modified from output following form submission at Creative Commons for CC0 license usage -->
+        <div  class="footer_workaround"/>
         <footer>
             <p xmlns:dct="http://purl.org/dc/terms/"
                 xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
