@@ -3,7 +3,7 @@ body {
   font-family: monospace;
 }
 .footer_workaround {
-    height: 150px;
+    height: 100px;
 }
 footer {
     position: fixed;
