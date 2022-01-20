@@ -21,6 +21,10 @@ footer {
 .toc_li {
 	margin-bottom: 7px;
 }
+.default_color {
+    background: #dbbfbf;
+    /* some kind of ligh-reddish-gray */
+}
 .text_color {
 	background: #e8eafc;
 	/* lighter blue-gray */
