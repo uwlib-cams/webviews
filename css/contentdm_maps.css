@@ -1,4 +1,4 @@
-/* CSS FOR MIG MAPs */
+/* CSS FOR MIG CONTENTdm MAPs */
 body {
   font-family: monospace;
 }
@@ -6,7 +6,7 @@ body {
     height: 150px;
 }
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background: #f2f2f2;
 }
