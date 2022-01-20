@@ -6,7 +6,7 @@ body {
     height: 150px;
 }
 footer {
-    position: relative;
+    position: absolute;
     bottom: 0;
     background: #f2f2f2;
 }
