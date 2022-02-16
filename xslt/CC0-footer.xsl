@@ -7,7 +7,7 @@
     <!-- generate footer with CC0 dedication; 
         include spacing (see div w. class footer_workaround) at bottom of page to avoid overlap -->
     
-    <xsl:template name="CC0">
+    <xsl:template name="CC0-footer">
         <xsl:param name="resource_title"/>
         <xsl:param name="org"/>
         <!-- Markup adapted from HTML provided following form submission at Creative Commons for CC0 license usage -->
