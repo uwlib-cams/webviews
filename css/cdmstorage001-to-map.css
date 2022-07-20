@@ -6,6 +6,12 @@
 body {
   font-family: monospace;
 }
+.italic {
+    font-style: italic;
+}
+.bold {
+    font-weight: bold;
+}
 .footer_workaround {
     height: 110px;
 }
