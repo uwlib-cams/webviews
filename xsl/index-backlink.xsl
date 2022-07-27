@@ -6,25 +6,25 @@
 
     <xsl:template name="index-backlink">
         <xsl:param name="site"/>
-        <p>
-            <span class="backlink">
-                <xsl:text>Return to  </xsl:text>
-                <xsl:choose>
-                    <!-- [!] CAUTION relative paths depend on repo directory structure -->
-                    <xsl:when test="$site = 'webviews'">
-                        <a href="index.html">CAMS webviews</a>
-                    </xsl:when>
-                    <xsl:when test="$site = 'contentdm_maps'">
-                        <a href="../index.html">MIG CONTENTdm MAPs</a>
-                    </xsl:when>
-                    <xsl:when test="$site = 'sinopia_maps'">
-                        <a href="index.html">CAMS Sinopia MAPs</a>
-                    </xsl:when>
-                    <xsl:otherwise>ERROR - UNABLE TO GENERATE BACKLINK TO SITE INDEX [index_backlink template]</xsl:otherwise>
-                </xsl:choose>
-                <xsl:text> index</xsl:text>
-            </span>
-        </p>
+        <span class="backlink">
+            <xsl:choose>
+                <!-- [!] CAUTION relative paths depend on repo directory structure -->
+                <xsl:when test="$site = 'webviews'">
+                    <a href="index.html">CAMS webviews</a>
+                </xsl:when>
+                <xsl:when test="$site = 'contentdm_maps'">
+                    <a href="https://www.lib.washington.edu/cams/mig/datadicts">MIG Data
+                        Dictionaries</a>
+                    <xsl:text> | </xsl:text>
+                    <a href="../index.html">MIG CONTENTdm MAPs</a>
+                </xsl:when>
+                <xsl:when test="$site = 'sinopia_maps'">
+                    <a href="index.html">CAMS Sinopia MAPs</a>
+                </xsl:when>
+                <xsl:otherwise>ERROR - webviews > index-backlink.xsl</xsl:otherwise>
+            </xsl:choose>
+            <xsl:text> index</xsl:text>
+        </span>
     </xsl:template>
 
 </xsl:stylesheet>
