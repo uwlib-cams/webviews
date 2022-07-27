@@ -21,7 +21,6 @@
                 </xsl:when>
                 <xsl:otherwise>ERROR - webviews > index-backlink.xsl</xsl:otherwise>
             </xsl:choose>
-            <xsl:text> index</xsl:text>
         </span>
     </xsl:template>
 
