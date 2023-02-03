@@ -72,6 +72,11 @@ li {
 .active {
   display: block;
 }
+footer {
+    position: fixed;
+    bottom: 0;
+    background: #f2f2f2;
+}
 .footer_workaround {
     height: 110px;
 }
