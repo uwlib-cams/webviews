@@ -44,6 +44,11 @@ li {
     font-size: 110% ;
     background-color: #fcf4a3 ;
 }
+.ptInfoRemark {
+    font-style: italic;
+    background-color: #EBECF3;
+    font-weight: bold;
+}
 .backlink {
     font-weight: bold ;
     background-color: #F8F8F8 ;
