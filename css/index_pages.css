@@ -7,9 +7,14 @@ html {
 }
 .indexTop {
     background: #DCE8F5 ;
+    /* These class names aren't good, deprecate where possible */
 }
 .indexHeading {
     background-color: #E8E8E8 ;
+    /* These class names aren't good, deprecate where possible */
+}
+h1 {
+    background: #DCE8F5 ;
 }
 p, ul, li {
     font-size: 110% ;
