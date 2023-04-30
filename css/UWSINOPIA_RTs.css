@@ -1,23 +1,37 @@
 html {
     font-family: monospace ;
 }
-table {
-    margin-bottom: 25px ; 
-    border-spacing: 10px ;
+/* HEADINGS */
+h1 {
+    background-color: #ebebf5 ;
 }
+h2 {
+    background-color: #ebf5f0 ;
+}
+
+/* TABLES */
 thead th {
     text-align: right ;
+}
+thead td {
+    padding-left: 15px ;
 }
 tbody th {
     text-align: right ;
 }
-tbody tr:nth-child(odd) {
-    background-color: #D3D3D3 ;
-}
-tbody tr:nth-child(even) {
-    background-color: #F8F8F8 ;
+tbody td {
+    padding-left: 15px ;
 }
 
+/* BACKLINKS */
+.backlink {
+    font-weight: bold ;
+    padding: 10px ;
+    background-color: #F8F8F8 ;
+    text-align: center ;
+}
+
+/* FOOTER */
 footer {
     position: fixed;
     bottom: 0;
