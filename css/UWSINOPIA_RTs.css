@@ -4,9 +4,15 @@ html {
 /* HEADINGS */
 h1 {
     background-color: #ebebf5 ;
+    padding: 10px ;
 }
 h2 {
     background-color: #ebf5f0 ;
+    padding: 10px ;
+}
+h3 {
+    background-color: #f7f5eb ;
+    padding: 10px ;
 }
 
 /* TABLES */
