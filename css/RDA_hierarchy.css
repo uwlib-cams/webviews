@@ -3,6 +3,10 @@ html {
     font-size: large;
 }
 
+body {
+  margin-bottom: 12%;
+}
+
 /* Remove default bullets */
 ul, #BT {
   list-style-type: none;
