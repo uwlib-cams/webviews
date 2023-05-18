@@ -3,6 +3,10 @@ html {
     font-size: large;
 }
 
+body {
+  margin-bottom: 12%;
+}
+
 /* Remove default bullets */
 ul, #BT {
   list-style-type: none;
@@ -17,7 +21,7 @@ ul, #BT {
 /* Style the caret/arrow */
 .caret {
   cursor: pointer;
-  user-select: none; /* Prevent text selection */
+  /* reason?? user-select: none; /* Prevent text selection */
 }
 
 /* Create the caret/arrow with a unicode, and style it */
@@ -41,4 +45,22 @@ ul, #BT {
 /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
 .active {
   display: block;
+}
+
+.h1{
+  background-color: #d0f0c0;
+}
+
+.list-container{
+  margin-left: 2%;
+}
+
+/* FOOTER */
+footer {
+  position: fixed;
+  bottom: 0;
+  background: #f2f2f2;
+  width: 100%;
+  font-style: italic;
+  
 }
