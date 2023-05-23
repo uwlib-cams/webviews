@@ -19,6 +19,9 @@ h1 {
 p, ul, li {
     font-size: 110% ;
 }
+.italic {
+    font-style: italic ;
+}
 .footer_workaround {
     height: 100px;
 }
