@@ -31,6 +31,9 @@ li {
     font-size: 120% ;
     background-color: #d0f0c0 ;
 }
+.rtInfo th {
+    text-align: left;
+}
 .ptList {
     padding-left: 50px ;
 }
