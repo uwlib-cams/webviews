@@ -56,6 +56,9 @@ ul, #BT {
 }
 
 /* FOOTER */
+.footer_workaround {
+    height: 110px;
+}
 footer {
   position: fixed;
   bottom: 0;
