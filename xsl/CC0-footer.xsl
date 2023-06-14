@@ -63,14 +63,11 @@
         <footer>
             <p xmlns:dct="http://purl.org/dc/terms/"
                 xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
-                <span>This resource includes content originating from the <a href="https://www.rdaregistry.info/">RDA Registry</a>. 
+                <span>This resource presents content originating from the <a href="https://www.rdaregistry.info/">RDA Registry</a>. 
                     <strong>RDA Vocabularies</strong> and <strong>RDA Registry</strong> are licensed under a 
                     <a href="http://creativecommons.org/licenses/by/4.0/deed.en_US">Creative Commons Attribution 4.0 International License</a>.</span>
-                <br/>                
-                <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">
-                    <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png"
-                        style="border-style: none;" alt="CC0"/>
-                </a>
+                <br/>
+                <span>- - - - - </span>
                 <br/>
                 <xsl:text>To the extent possible under law, </xsl:text>
                 <xsl:choose>
@@ -103,6 +100,11 @@
                     <xsl:text>United States</xsl:text>
                 </span>
                 <xsl:text>. </xsl:text>
+                <br/>                
+                <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">
+                    <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png"
+                        style="border-style: none;" alt="CC0"/>
+                </a>
             </p>
         </footer>
     </xsl:template>
