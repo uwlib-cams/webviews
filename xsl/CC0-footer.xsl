@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    exclude-result-prefixes="xs"
-    version="2.0">
-    
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0">
+
     <!-- generate footer with CC0 dedication; 
         include spacing (see div w. class footer_workaround) at bottom of page to avoid overlap -->
-    
+
     <xsl:template name="CC0-footer">
         <xsl:param name="resource_title"/>
         <xsl:param name="org"/>
         <!-- Markup adapted from HTML provided following form submission at Creative Commons for CC0 license usage -->
-        <div  class="footer_workaround"/>
+        <div class="footer_workaround"/>
         <footer>
             <p xmlns:dct="http://purl.org/dc/terms/"
                 xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
@@ -40,10 +38,12 @@
                         <xsl:text>ERROR GENERATING ORG NAME FOR FOOTER</xsl:text>
                     </xsl:otherwise>
                 </xsl:choose>
-                
+
                 <xsl:text> has waived all copyright and related or neighboring rights to </xsl:text>
                 <span property="dct:title">
-                    <xsl:value-of select="$resource_title"/>
+                    <strong>
+                        <xsl:value-of select="$resource_title"/>
+                    </strong>
                 </span>
                 <xsl:text>. This work is published from: </xsl:text>
                 <span property="vcard:Country" datatype="dct:ISO3166" content="US"
@@ -54,18 +54,20 @@
             </p>
         </footer>
     </xsl:template>
-    
+
     <xsl:template name="CC0-footer-rda-pages">
         <xsl:param name="resource_title"/>
         <xsl:param name="org"/>
         <!-- Markup adapted from HTML provided following form submission at Creative Commons for CC0 license usage -->
-        <div  class="footer_workaround"/>
+        <div class="footer_workaround"/>
         <footer>
             <p xmlns:dct="http://purl.org/dc/terms/"
                 xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
-                <span>This resource presents content originating from the <a href="https://www.rdaregistry.info/">RDA Registry</a>. 
-                    <strong>RDA Vocabularies</strong> and <strong>RDA Registry</strong> are licensed under a 
-                    <a href="http://creativecommons.org/licenses/by/4.0/deed.en_US">Creative Commons Attribution 4.0 International License</a>.</span>
+                <span>This resource presents content originating from the <a
+                        href="https://www.rdaregistry.info/">RDA Registry</a>. <strong>RDA
+                        Vocabularies</strong> and <strong>RDA Registry</strong> are licensed under a
+                        <a href="http://creativecommons.org/licenses/by/4.0/deed.en_US">Creative
+                        Commons Attribution 4.0 International License</a>.</span>
                 <br/>
                 <span>- - - - - </span>
                 <br/>
@@ -89,10 +91,12 @@
                         <xsl:text>ERROR GENERATING ORG NAME FOR FOOTER</xsl:text>
                     </xsl:otherwise>
                 </xsl:choose>
-                
+
                 <xsl:text> has waived all copyright and related or neighboring rights to </xsl:text>
                 <span property="dct:title">
-                    <xsl:value-of select="$resource_title"/>
+                    <strong>
+                        <xsl:value-of select="$resource_title"/>
+                    </strong>
                 </span>
                 <xsl:text>. This work is published from: </xsl:text>
                 <span property="vcard:Country" datatype="dct:ISO3166" content="US"
@@ -100,7 +104,7 @@
                     <xsl:text>United States</xsl:text>
                 </span>
                 <xsl:text>. </xsl:text>
-                <br/>                
+                <br/>
                 <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">
                     <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png"
                         style="border-style: none;" alt="CC0"/>
@@ -108,5 +112,5 @@
             </p>
         </footer>
     </xsl:template>
-    
+
 </xsl:stylesheet>
