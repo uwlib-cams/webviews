@@ -59,7 +59,7 @@
         <xsl:param name="resource_title"/>
         <xsl:param name="org"/>
         <!-- Markup adapted from HTML provided following form submission at Creative Commons for CC0 license usage -->
-        <div  class="rda_footer_workaround"/>
+        <div  class="footer_workaround"/>
         <footer>
             <p xmlns:dct="http://purl.org/dc/terms/"
                 xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
