@@ -52,6 +52,7 @@ footer {
     position: fixed;
     bottom: 0;
     background: #f2f2f2;
+    padding-bottom: 5px;
 }
 .footer_workaround {
     height: 110px;
