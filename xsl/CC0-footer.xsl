@@ -12,7 +12,7 @@
         <div class="footer_workaround"/>
         <footer>
             <div class="footer_container">
-                <p xmlns:dct="http://purl.org/dc/terms/"
+                <span xmlns:dct="http://purl.org/dc/terms/"
                     xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
                     <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">
                         <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png"
@@ -53,7 +53,7 @@
                         </span>
                         <xsl:text>. </xsl:text>
                     </div>
-                </p>
+                </span>
             </div>
         </footer>
     </xsl:template>
@@ -64,17 +64,18 @@
         <!-- Markup adapted from HTML provided following form submission at Creative Commons for CC0 license usage -->
         <div class="footer_workaround"/>
         <footer>
-            <p xmlns:dct="http://purl.org/dc/terms/"
+            <span xmlns:dct="http://purl.org/dc/terms/"
                 xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
-                <span>This resource presents content originating from the <a
-                        href="https://www.rdaregistry.info/">RDA Registry</a>. <strong>RDA
-                        Vocabularies</strong> and <strong>RDA Registry</strong> are licensed under a
-                        <a href="http://creativecommons.org/licenses/by/4.0/deed.en_US">Creative
-                        Commons Attribution 4.0 International License</a>.</span>
+                <p>This resource presents content originating from the 
+                    <a href="https://www.rdaregistry.info/">RDA Registry</a>. 
+                    <strong>RDA Vocabularies</strong> 
+                    and <strong>RDA Registry</strong> are licensed under a
+                    <a href="http://creativecommons.org/licenses/by/4.0/deed.en_US">
+                        Creative Commons Attribution 4.0 International License</a>.
+                </p>
                 <div class="footer_container">
                     <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">
-                        <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png"
-                            style="border-style: none;" alt="CC0"/>
+                        <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0"/>
                     </a>
                     <div>
                         <xsl:text>To the extent possible under law, </xsl:text>
@@ -105,14 +106,13 @@
                             </strong>
                         </span>
                         <xsl:text>. This work is published from: </xsl:text>
-                        <span property="vcard:Country" datatype="dct:ISO3166" content="US"
-                            about="https://www.lib.washington.edu/cams">
+                        <span property="vcard:Country" datatype="dct:ISO3166" content="US" about="https://www.lib.washington.edu/cams">
                             <xsl:text>United States</xsl:text>
                         </span>
                         <xsl:text>. </xsl:text>
                     </div>
                 </div>
-            </p>
+            </span>
         </footer>
     </xsl:template>
 
