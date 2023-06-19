@@ -44,3 +44,19 @@ html {
 .lastUpdate {
     font-size: 110% ;
 }
+footer {
+    position: fixed;
+    bottom: 0;
+    background: #f2f2f2;
+    padding-bottom: 5px;
+    font-size: medium;
+  }
+  .footer_workaround {
+    height: 110px;
+  }
+  .footer_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+  }
