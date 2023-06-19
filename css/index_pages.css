@@ -27,6 +27,7 @@ footer {
     bottom: 0;
     background: #f2f2f2;
     padding-bottom: 5px;
+    font-size: medium;
 }
 .footer_workaround {
     height: 110px;
