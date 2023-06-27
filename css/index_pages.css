@@ -16,6 +16,9 @@ html {
 h1 {
     background: #DCE8F5 ;
 }
+h2 {
+    background: #f2f5f7 ;
+}
 p, ul, li {
     font-size: 110% ;
 }
