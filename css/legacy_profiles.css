@@ -48,3 +48,18 @@ li {
     font-weight: bold ;
     background-color: #F8F8F8 ;
 }
+footer {
+    position: fixed;
+    bottom: 0;
+    background: #f2f2f2;
+    padding-bottom: 5px;
+}
+.footer_workaround {
+    height: 110px;
+}
+.footer_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
