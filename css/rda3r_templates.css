@@ -14,15 +14,20 @@ tbody tr:nth-child(even) {
 li {
     line-height: 1.5 ;
 }
+h2 {
+    font-size: 1.17em;
+    padding-left: 30px;
+    background-color: #e9f0ee;
+    width: 100%;
+    padding-top: .5%;
+    padding-bottom: .5%;
+}
 .profileInfo {
 	text-align: center ;
 }
 .profileInfo thead {
     font-size: 120% ;
     background-color: #b0dfe5 ;
-}
-.rtList h2 span {
-    background-color: #d0f0c0 ;
 }
 .rtInfo {
     padding-left: 25px ;
@@ -34,14 +39,11 @@ li {
 .ptList {
     padding-left: 50px ;
 }
-.ptList h3 span {
-    background-color: #fcf4a3 ;
-}
 .ptInfo {
     padding-left: 75px ;
 }
-.ptInfo h4 span {
-    font-size: 110% ;
+.ptInfo h3 span {
+    font-size: .83em;
     background-color: #fcf4a3 ;
 }
 .ptInfoRemark {
@@ -52,8 +54,8 @@ li {
 .ptInfoGuidance {
     background-color: #d3d3d3;
 }
-.ptInfoGuidance h5 {
-    font-size: 100%;
+.ptInfoGuidance h4 {
+
     text-decoration: underline;
 }
 

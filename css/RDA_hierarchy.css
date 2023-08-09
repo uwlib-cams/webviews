@@ -55,6 +55,18 @@ ul, #BT {
   margin-left: 2%;
 }
 
+button {
+  background: none;
+  border: none;
+  padding: 2px;
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: medium;
+  margin-left: 2%;
+  margin-bottom: 5px;
+}
+
 /* FOOTER */
 footer {
   position: fixed;

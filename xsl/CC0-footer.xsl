@@ -12,7 +12,7 @@
         <div class="footer_workaround"/>
         <footer>
             <div class="footer_container">
-                <span xmlns:dct="http://purl.org/dc/terms/"
+                <section xmlns:dct="http://purl.org/dc/terms/"
                     xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#"><p></p>
                     <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">
                         <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png"
@@ -53,7 +53,7 @@
                         </span>
                         <xsl:text>. </xsl:text>
                     </div>
-                </span>
+                </section>
             </div>
         </footer>
     </xsl:template>
@@ -64,7 +64,7 @@
         <!-- Markup adapted from HTML provided following form submission at Creative Commons for CC0 license usage -->
         <div class="footer_workaround"/>
         <footer>
-            <span xmlns:dct="http://purl.org/dc/terms/"
+            <section xmlns:dct="http://purl.org/dc/terms/"
                 xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
                 <p>This resource presents content originating from the 
                     <a href="https://www.rdaregistry.info/">RDA Registry</a>. 
@@ -112,7 +112,7 @@
                         <xsl:text>. </xsl:text>
                     </div>
                 </div>
-            </span>
+            </section>
         </footer>
     </xsl:template>
 
