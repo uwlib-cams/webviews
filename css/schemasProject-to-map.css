@@ -4,14 +4,6 @@
 body {
   font-family: monospace;
 }
-.footer_workaround {
-    height: 110px;
-}
-footer {
-    position: fixed;
-    bottom: 0;
-    background: #f2f2f2;
-}
 .title_color {
     background: #f2f2f2;
     /* lighter gray */
@@ -79,4 +71,19 @@ footer {
 .match_li_indent {
 	padding-left: 15px;
 }
-
+footer {
+    position: fixed;
+    bottom: 0;
+    background: #f2f2f2;
+    padding-bottom: 5px;
+    font-size: medium;
+}
+.footer_workaround {
+    height: 110px;
+}
+.footer_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
