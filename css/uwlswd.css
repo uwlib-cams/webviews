@@ -27,6 +27,10 @@ div.alternatelinks a{
     padding-top: 30px;
 }
 
+:target {
+    font-weight: bolder;
+}
+
 footer {
     position: fixed;
     bottom: 0;
