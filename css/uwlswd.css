@@ -85,3 +85,8 @@ footer {
     border-top: none;
   } 
   
+  /* download link style */
+  .download {
+    float: right;
+    font-size: large;
+  }
