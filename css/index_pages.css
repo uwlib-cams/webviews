@@ -3,28 +3,44 @@
  */
 
 html {
-    font-family: monospace ;
+    font-family: 'Open Sans', verdana, sans-serif;
 }
-.indexTop {
-    background: #DCE8F5 ;
-    /* These class names aren't good, deprecate where possible */
-}
-.indexHeading {
-    background-color: #E8E8E8 ;
-    /* These class names aren't good, deprecate where possible */
-}
+
 h1 {
-    background: #DCE8F5 ;
+   
+    color:#8e632a;
+    padding: 10px;
+    font-weight: 400;
 }
+
 h2 {
-    background: #f2f5f7 ;
+    background: #5b3e912c ;
+    padding: 5px;
+    font-weight: 400;
 }
+
+h3 {
+    font-weight: 400;
+}
+
 p, ul, li {
-    font-size: 110% ;
+    font-size: 14px ;
 }
+
+a {
+    color: #5b3e91;
+    font-weight: bold;
+}
+
 .italic {
     font-style: italic ;
 }
+
+.contact {
+    text-align: center;
+    padding-top: 30px;
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -39,5 +55,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: small;
+    padding-top: 5px;
     column-gap: 20px;
 }
