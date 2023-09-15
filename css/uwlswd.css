@@ -1,6 +1,24 @@
 
 html {
-  font-family: Arial, Helvetica, sans-serif ;
+  font-family: 'Open Sans', verdana, sans-serif;
+  font-size: 14px;
+}
+
+h1 {
+  color:#8e632a;
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+a {
+  color: #5b3e91;
+}
+
+.tablinks {
+  font-size: 16px;
 }
 
 table {
@@ -15,11 +33,11 @@ th, tr, td{
 }
 
 tr:hover{
-    background: #e9f0ee;
+    background: #e5e1ee;
    }
 
 th {
-    background-color: #D3D3D3;
+    background-color: #5b3e912c;
 }
 
 div.alternatelinks a{
@@ -57,7 +75,8 @@ footer {
  .tab {
     overflow: hidden;
     border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    background-color: #a393c0;
+
   }
 
   /* Style the buttons that are used to open the tab content */
@@ -73,12 +92,12 @@ footer {
   
   /* Change background color of buttons on hover */
   .tab button:hover {
-    background-color: #ddd;
+    background-color: #cdc3df;
   }
   
   /* Create an active/current tablink class */
   .tab button.active {
-    background-color: #ccc;
+    background-color: #cdc3df;
   }
   
   /* Style the tab content */
