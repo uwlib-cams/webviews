@@ -94,6 +94,10 @@ footer {
   .tab button:hover {
     background-color: #cdc3df;
   }
+
+  .tab button:focus {
+    background-color: #cdc3df;
+  }
   
   /* Create an active/current tablink class */
   .tab button.active {
