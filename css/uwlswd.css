@@ -111,6 +111,11 @@ footer {
     border: 1px solid #ccc;
     border-top: none;
   } 
+
+  pre {
+    white-space: pre-wrap;
+    }
+
   
   /* download link style */
   .download {
