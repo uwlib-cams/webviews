@@ -21,15 +21,22 @@ a {
   font-size: 16px;
 }
 
+#table {
+  overflow-x: scroll;
+}
+
 table {
-    width: 100%;
     border-collapse: collapse;
+    font-size: small; 
+    width: 100%; 
+    overflow-wrap: break-word;
 }
 
 th, tr, td{
     border: 1px solid;
     border-collapse: collapse;
     padding: 6px;
+
 }
 
 tr:hover{
