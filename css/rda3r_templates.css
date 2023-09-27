@@ -1,6 +1,13 @@
 html {
-    font-family: monospace ;
+    font-family: 'Open Sans', verdana, sans-serif;
+    font-size: small;
 }
+
+.banner {
+    background-color: #4b2e83;
+    padding: 10px; 
+}
+
 table {
     margin-bottom: 25px ; 
     border-spacing: 10px ;
@@ -14,27 +21,39 @@ tbody tr:nth-child(even) {
 li {
     line-height: 1.5 ;
 }
+h1 {
+   
+    color:#8e632a;
+    padding: 10px;
+    font-weight: 400;
+}
+
 h2 {
-    font-size: 1.17em;
+    background: #5b3e912c ;
     padding-left: 30px;
-    background-color: #e9f0ee;
     width: 100%;
     padding-top: .5%;
     padding-bottom: .5%;
+    font-weight: 400;
 }
+
+a {
+    color: #5b3e91;
+    font-weight: bold;
+}
+
 .profileInfo {
 	text-align: center ;
 }
 .profileInfo thead {
-    font-size: 120% ;
-    background-color: #b0dfe5 ;
+    font-size: 14px ;
+    background: #5b3e912c ; ;
 }
 .rtInfo {
     padding-left: 25px ;
 }
 .rtInfo thead {
-    font-size: 120% ;
-    background-color: #d0f0c0 ;
+    background-color: #5b3e912c ;
 }
 .ptList {
     padding-left: 50px ;
@@ -43,8 +62,9 @@ h2 {
     padding-left: 75px ;
 }
 .ptInfo h3 span {
-    font-size: .83em;
     background-color: #fcf4a3 ;
+    font-weight: bold;
+    font-size: 14px;
 }
 .ptInfoRemark {
     font-style: italic;
@@ -64,7 +84,7 @@ h2 {
     background-color: #F8F8F8 ;
 }
 .oneTwenty {
-    font-size: 120% ;
+    font-size: 14px ;
 }
 .strong {
     font-weight: bold ;
@@ -117,5 +137,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: small;
     column-gap: 20px;
 }

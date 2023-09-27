@@ -1,15 +1,28 @@
 html {
-    font-family: monospace;
-    font-size: large;
+  font-family: 'Open Sans', verdana, sans-serif;
+  font-size: 14px;
 }
 
 body {
   margin-bottom: 12%;
 }
 
+h1 {
+  color:#8e632a;
+  font-weight: 400;
+}
+
+a {
+  color: #5b3e91;
+}
+
 /* Remove default bullets */
 ul, #BT {
   list-style-type: none;
+}
+
+li {
+  margin: 5px;
 }
 
 /* Remove margins and padding from the parent ul */
@@ -27,7 +40,7 @@ ul, #BT {
 /* Create the caret/arrow with a unicode, and style it */
 .caret::before {
   content: "\25B6";
-  color: black;
+  color: #392068;
   display: inline-block;
   margin-right: 6px;
 }
@@ -47,10 +60,6 @@ ul, #BT {
   display: block;
 }
 
-.h1{
-  background-color: #d0f0c0;
-}
-
 .list-container{
   margin-left: 2%;
 }
@@ -59,7 +68,7 @@ button {
   background: none;
   border: none;
   padding: 2px;
-  color: #069;
+  color: #5b3e91;
   text-decoration: underline;
   cursor: pointer;
   font-size: medium;
@@ -73,7 +82,7 @@ footer {
   bottom: 0;
   background: #f2f2f2;
   padding-bottom: 5px;
-  font-size: medium;
+  font-size: small;
 }
 .footer_workaround {
   height: 110px;
