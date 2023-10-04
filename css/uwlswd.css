@@ -1,3 +1,6 @@
+/* 
+ css for uwlswd web pages  
+*/
 
 html {
   font-family: 'Open Sans', verdana, sans-serif;
@@ -13,14 +16,17 @@ h2 {
   font-weight: 400;
 }
 
+/* links */
 a {
   color: #5b3e91;
 }
 
+/* fancy html tabs */
 .tablinks {
   font-size: 16px;
 }
 
+/* allow scrolling when table is too long */
 #table {
   overflow-x: scroll;
 }
@@ -39,6 +45,7 @@ th, tr, td{
 
 }
 
+/* highlight row on hover */
 tr:hover{
     background: #e5e1ee;
    }
@@ -51,15 +58,18 @@ div.alternatelinks a{
     margin: 5px;
 }
 
+/* contact info */
 .contact {
     text-align: center;
     padding-top: 30px;
 }
 
+/* bold bnodes when linked through table */
 :target {
     font-weight: bolder;
 }
 
+/* attribution footer */
 footer {
     position: fixed;
     bottom: 0%;

@@ -7,7 +7,6 @@ html {
 }
 
 h1 {
-   
     color:#8e632a;
     padding: 10px;
     font-weight: 400;
@@ -27,6 +26,7 @@ p, ul, li {
     font-size: 14px ;
 }
 
+/* link color */
 a {
     color: #5b3e91;
     font-weight: bold;
@@ -36,11 +36,13 @@ a {
     font-style: italic ;
 }
 
+/* contact info */
 .contact {
     text-align: center;
     padding-top: 30px;
 }
 
+/* attribution footer */
 footer {
     position: fixed;
     bottom: 0;
