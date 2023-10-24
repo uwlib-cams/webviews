@@ -27,6 +27,10 @@ p, ul, li {
     font-size: 14px ;
 }
 
+.indent {
+    text-indent: 30px;
+}
+
 /* link color */
 a {
     color: #5b3e91;
