@@ -41,6 +41,10 @@ a {
     font-style: italic ;
 }
 
+.return_to_top {
+    background: #f2f2f2;
+}
+
 /* contact info */
 .contact {
     text-align: center;
