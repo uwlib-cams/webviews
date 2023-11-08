@@ -27,8 +27,8 @@ p, ul, li {
     font-size: 14px ;
 }
 
-.indent {
-    text-indent: 30px;
+.no_bullets {
+	list-style-type: none;
 }
 
 /* link color */
