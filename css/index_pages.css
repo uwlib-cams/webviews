@@ -27,8 +27,8 @@ p, ul, li {
     font-size: 14px ;
 }
 
-.no_bullets {
-	list-style-type: none;
+.margin_left_30 {
+    margin-left: 30px;
 }
 
 /* link color */
