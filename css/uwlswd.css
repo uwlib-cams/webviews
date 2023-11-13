@@ -139,3 +139,8 @@ footer {
     float: right;
     font-size: large;
   }
+
+  /* return link style */
+  .return {
+    float: right; 
+  }
