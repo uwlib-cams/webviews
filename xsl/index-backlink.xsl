@@ -10,14 +10,14 @@
             <xsl:choose>
                 <!-- [!] CAUTION relative paths depend on repo directory structure -->
                 <xsl:when test="$site = 'webviews'">
-                    <a href="index.html">CAMS webviews</a>
+                    <a href="https://uwlib-cams.github.io/webviews/">CAMS webviews</a>
                 </xsl:when>
                 <xsl:when test="$site = 'contentdm_maps'">
                     <a href="https://www.lib.washington.edu/cams/mig/datadicts">MIG Data
                         Dictionaries</a>
                 </xsl:when>
                 <xsl:when test="$site = 'sinopia_maps'">
-                    <a href="index.html">CAMS Sinopia MAPs</a>
+                    <a href="https://uwlib-cams.github.io/sinopia_maps/">Sinopia MAPs</a>
                 </xsl:when>
                 <xsl:otherwise>ERROR - webviews > index-backlink.xsl</xsl:otherwise>
             </xsl:choose>
