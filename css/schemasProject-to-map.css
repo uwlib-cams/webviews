@@ -15,6 +15,7 @@ body {
 .toc_li {
 	margin-bottom: 7px;
 }
+/* color enumerations by object type, with exceptions 'default', 'standalone' */
 .default_color {
     background: #d4c9c9;
     /* some kind of ligh-reddish-gray */
@@ -30,6 +31,12 @@ body {
 .oh_color {
 	background: #eef4f7;
 	/* lighter, different blue-gray */
+}
+.image_color {
+    background: #DBE2EA;
+}
+.document_color {
+    background: #E3EADB;
 }
 .standalone_color {
 	background: #fcfbe9;
