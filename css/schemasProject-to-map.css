@@ -32,12 +32,16 @@ body {
     background: #eef4f7;
     /* lighter, different blue-gray */
 }
-.image_color {
+
+/* see schema-4-objectType.xsd */
+.photographs_color {
     background: #DBE2EA;
 }
-.document_color {
+.documents_color {
     background: #E3EADB;
 }
+/* end schema-4-objectType.xsd */
+
 .standalone_color {
     background: #fcfbe9;
     /* lighter...yellow?? */
