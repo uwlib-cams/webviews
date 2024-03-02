@@ -1,0 +1,109 @@
+/* CSS (2) FOR MIG CONTENTdm MAPs 
+ * which are generated from schemasProject properties-files*/
+
+/* Backgrounds for guidance sections - by lcgft */
+/* with exceptions 'default', 'standalone' */
+.Photographs_color {
+    background: #DBE2EA;
+}
+.RecordsDocuments_color {
+    background: #E3EADB;
+}
+.Newsletters_color {
+    background: #B6F7B1;
+}
+
+/* table stuff */
+.all_list_table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+    letter-spacing: 1px;
+}
+.all_list_table_thead {
+    background-color: #E1F3F3;
+}
+.alt_rows > tr:nth-of-type(even){
+    background-color: #f2f2f2;
+}
+.all_list_table_th,
+.all_list_table_td {
+    border: 1px solid rgb(160 160 160);
+    padding: 8px 10px;
+}
+.prop_table_head {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.prop_table {
+    width: 100%;
+}
+
+
+body {
+    font-family: monospace;
+}
+.title_color {
+    background: #f2f2f2;
+    /* lighter gray */
+}
+.toc_color {
+    background: #d9d9d9;
+    /* light gray */
+}
+.toc_li {
+    margin-bottom: 7px;
+}
+
+
+.standalone_color {
+    background: #fcfbe9;
+    /* lighter...yellow?? */
+}
+.settings_color {
+    background: #e6e9f5;
+    /* lighter blue */
+}
+.no_bullets {
+    list-style-type: none;
+}
+.italic {
+    font-style: italic;
+}
+.bold {
+    font-weight: bold;
+}
+.large_one {
+    font-size: 110%;
+}
+.large_two {
+    font-size: 120%;
+}
+.right_align {
+    text-align: right;
+}
+.center_align {
+    text-align: center;
+}
+
+.match_li_indent {
+    padding-left: 15px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    background: #f2f2f2;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: medium;
+}
+.footer_workaround {
+    height: 110px;
+}
+.footer_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
